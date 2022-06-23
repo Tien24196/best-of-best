@@ -1,5 +1,8 @@
 // Assignment code here
-
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numBer = "0123456789";
+var specChar = "!#$%&'()*+,-./:;<=>?@][^_`{|}~";
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
