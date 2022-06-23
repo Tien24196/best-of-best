@@ -23,7 +23,39 @@ function generatePassword() {
       var pickedSpechar = window.confirm("Do you want to include special characters in your password?")
         
   } 
-}};
+  
+  var passChar = ""
+  if (pickedLowercase) {var passChar = passChar.concat(lowerCase)};
+  if (pickedUppercase) {var passChar = passChar.concat(upperCase) };
+  if (pickedNumber) {var passChar = passChar.concat(numBer) };
+  if (pickedSpechar) {var passChar = passChar.concat(specChar)};
+
+  var password = ""
+  for (var i = 0; i < passLength; i++) {
+    password = password + passChar[Math.floor(Math.random() * passChar.length)];
+   }
+
+} else {
+  window.alert("Password's lenght has to be between 8 and 128 character");
+  generatePassword()
+}
+
+  return password;
+}
+
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+var password = generatePassword();
+var passwordText = document.querySelector("#password");
+
+passwordText.value = password;
+
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
